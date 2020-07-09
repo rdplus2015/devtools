@@ -1,0 +1,69 @@
+   /* card */
+   
+   .card-content{
+    position: absolute;
+    top: 0px;
+    padding-bottom: 6rem;
+    max-width: 100%;
+    height: auto;
+    background-color: blue;
+
+   }
+
+   
+   /* card 1 */
+   
+   .card1
+   {
+       perspective: 1000px;  /* the perspective */
+   }
+
+   .card-front{
+       z-index: 1;  
+       transition: 3s;   /* temps de la rotation iverse, lorsque la souris quitte sur l'element */
+       backface-visibility: hidden;  
+   }
+
+   .card-back{
+       z-index: 0;
+       transition: 3s; /* temps de la rotation iverse, lorsque la souris quitte sur l'element */
+       transform: rotateY(180deg); 
+       backface-visibility: hidden; 
+   }
+
+    .card-front-rotation{
+       transform: rotateY(-180deg);
+       transition: transform 2s;
+    }
+
+    .card-back-rotation
+    {
+        transform: rotateY(-1deg);
+        transition: transform 2s;
+    }
+
+    .card-front-rotation-reverse{
+        transform: rotateY(-360deg);
+    }
+
+    .card-back-rotation-reverse{
+        transform: rotateY(-180deg);    
+    }
+  
+
+   /* card 2 */
+
+   @keyframes slideup{
+
+        from{
+            transform: translateY(300px);
+            opacity: 0;
+        }
+
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+
